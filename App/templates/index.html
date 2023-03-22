@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>
+        App | Home
+    </title>
+    <link rel="stylesheet" href="./../styles/app.css">
+    <link rel="stylesheet" href="./../styles/index.css">
+    <script src="./../../Framework/framework.js"></script>
+    <script src="./../actions/index.js"></script>
+    <script>
+
+        var interpolateObject = {
+        };
+
+        var bindIfObject = {
+        };
+
+        function load() {
+            interpolateObject.name = "World";
+            interpolate(interpolateObject);
+            hideGoodDay();
+        }
+
+        function changeMyName() {
+            interpolateObject.name = "Anindyo";
+            interpolate(interpolateObject);
+        }
+
+        function showGoodDay() {
+            bindIfObject.isGoodDayShown = true;
+            bindIf(bindIfObject);
+        }
+        
+        function hideGoodDay() {
+            bindIfObject.isGoodDayShown = false;
+            bindIf(bindIfObject);
+        }
+
+    </script>
+</head>
+
+<body onload="load()">
+    <div class="display-flex justify-content-space-between">
+        <div>
+            Home
+        </div>
+        <div>
+            <a href="./login.html">
+                Login
+            </a>
+        </div>
+    </div>
+    <div>
+        Hello <interpolate value="name"></interpolate>
+    </div>
+    <button onclick="changeMyName()">Change Greeting to my name</button>
+    <bindIf value="isGoodDayShown">
+        <span>This is a good day</span>
+        <button onclick="hideGoodDay()">Hide Good Day</button>
+    </bindIf>
+    <bindIf value="!isGoodDayShown">
+        <button onclick="showGoodDay()">Show Good Day</button>
+    </bindIf>
+</body>
+
+</html>
