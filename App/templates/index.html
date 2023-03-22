@@ -8,34 +8,6 @@
     <link rel="stylesheet" href="./../styles/index.css">
     <script src="./../../Framework/framework.js"></script>
     <script src="./../actions/index.js"></script>
-    <script>
-
-        var state = {
-        };
-
-        function load() {
-            state.name = "World";
-            framework.interpolate(state);
-            hideGoodDay();
-            framework.dataBind(state);
-        }
-
-        function changeMyName() {
-            state.name = "Anindyo";
-            framework.interpolate(state);
-        }
-
-        function showGoodDay() {
-            state.isGoodDayShown = true;
-            framework.bindIf(state);
-        }
-        
-        function hideGoodDay() {
-            state.isGoodDayShown = false;
-            framework.bindIf(state);
-        }
-
-    </script>
 </head>
 
 <body onload="load()">
