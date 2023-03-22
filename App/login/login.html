@@ -2,23 +2,23 @@
 
 <head>
     <title>
-        App | Home
+        App | Login
     </title>
-    <link rel="stylesheet" href="./../styles/app.css">
-    <link rel="stylesheet" href="./../styles/index.css">
+    <link rel="stylesheet" href="./../../App/app.css">
+    <link rel="stylesheet" href="./login.css">
     <script src="./../../Framework/framework.js"></script>
-    <script src="./../actions/index.js"></script>
+    <script src="./login.js"></script>
+    <script>
+    </script>
 </head>
 
 <body onload="load()">
     <div class="display-flex justify-content-space-between">
         <div>
-            Home
+            Login
         </div>
         <div>
-            <a href="./login.html">
-                Login
-            </a>
+            <a href="./../index/index.html">Home</a>
         </div>
     </div>
     <h4>Interpolation</h4>
@@ -34,12 +34,6 @@
     <bindIf value="!isGoodDayShown">
         <button onclick="showGoodDay()">Show Good Day</button>
     </bindIf>
-    <h4>DataBind</h4>
-    <input data-bind="input">
-    <div>
-        <interpolate value="input"></interpolate>
-    </div>
-
 
 </body>
 

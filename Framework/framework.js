@@ -1,3 +1,4 @@
+// My Shiny new JS Framework to rule the Runtime, Multi-Page Applications World! 
 var framework = {
     // Call the initialize function to get an observable Proxy to the state for the page.
     // Any change to the state variable also rerenders the changes to HTML.
