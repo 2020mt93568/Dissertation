@@ -50,7 +50,7 @@ var framework = {
     },
     //  Does Data Binding b/w HTML Template and JS.
     dataBind: function (state) {
-        for (var dataBindElement of document.querySelectorAll("[data-bind]")) {
+        for (let dataBindElement of document.querySelectorAll("[data-bind]")) {
             dataBindElement.addEventListener("input", function() {
                 state[dataBindElement.getAttribute("data-bind")] = dataBindElement.value;
                 this.interpolate(state);

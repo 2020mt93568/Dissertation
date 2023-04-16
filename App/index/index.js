@@ -9,6 +9,10 @@ function changeMyName() {
     state.name = "Anindyo";
 }
 
+function changeToPageName() {
+    state.name = "Home Page";
+}
+
 function showGoodDay() {
     state.isGoodDayShown = true;
 }

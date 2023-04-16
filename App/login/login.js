@@ -1,18 +1,22 @@
 var state = framework.initialize();
 
 function load() {
-    state.name = "Login Page";
-    state.isGoodDayShown = false;
+    state.isDebugShown = false;
+    state.message = "";
 }
 
-function changeMyName() {
-    state.name = "Anindyo";
+function login() {
+    if(state.username == "username" && state.password == "password") {
+        state.message = "Login successful!";
+    } else {
+        state.message = "Login failed! Please check username and password!";
+    }
 }
 
-function showGoodDay() {
-    state.isGoodDayShown = true;
+function showDebug() {
+    state.isDebugShown = true;
 }
 
-function hideGoodDay() {
-    state.isGoodDayShown = false;
+function hideDebug() {
+    state.isDebugShown = false;
 }

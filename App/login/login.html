@@ -13,28 +13,51 @@
 </head>
 
 <body onload="load()">
-    <div class="display-flex justify-content-space-between">
-        <div>
+    <div class="display-flex justify-content-space-between align-items-center">
+        <h1>
             Login
-        </div>
+        </h1>
         <div>
             <a href="./../index/index.html">Home</a>
         </div>
     </div>
-    <h4>Interpolation</h4>
-    <div>
-        Hello <interpolate value="name"></interpolate>
+    <div class="width-180-px margin-auto padding-16-px">
+        <div>
+            Username
+        </div>
+        <input data-bind="username" />
+        <br/>
+        <br/>
+        <div>
+            Password
+        </div>
+        <input data-bind="password" />
+        <br/>
+        <br/>
+            <button onclick="login()">Login</button>
+            <br/>
+            <br/>
+        <div>
+            <interpolate value="message"></interpolate>
+        </div>
     </div>
-    <button onclick="changeMyName()">Change Greeting to my name</button>
-    <h4>BindIf</h4>
-    <bindIf value="isGoodDayShown">
-        <span>This is a good day</span>
-        <button onclick="hideGoodDay()">Hide Good Day</button>
+    <bindIf value="isDebugShown">
+        <button onclick="hideDebug()">Hide Debug</button>
     </bindIf>
-    <bindIf value="!isGoodDayShown">
-        <button onclick="showGoodDay()">Show Good Day</button>
+    <bindIf value="!isDebugShown">
+        <button onclick="showDebug()">Show Debug</button>
     </bindIf>
-
+    <bindIf value="isDebugShown">
+        <div>
+            Debug
+        </div>
+        <div>
+            Username - <interpolate value="username"></interpolate>
+        </div>
+        <div>
+            Password - <interpolate value="password"></interpolate>
+        </div>
+    </bindIf>
 </body>
 
 </html>
