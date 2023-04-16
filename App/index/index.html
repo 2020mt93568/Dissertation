@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>
+        App | Home
+    </title>
+    <link rel="stylesheet" href="./../../App/app.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./../../Framework/framework.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body onload="load()">
+    <div class="display-flex justify-content-space-between">
+        <div>
+            Home
+        </div>
+        <div>
+            <a href="./../login/login.html">
+                Login
+            </a>
+        </div>
+    </div>
+    <h4>Interpolation</h4>
+    <div>
+        Hello <interpolate value="name"></interpolate>
+    </div>
+    <button onclick="changeMyName()">Change Greeting to my name</button>
+    <h4>BindIf</h4>
+    <bindIf value="isGoodDayShown">
+        <span>This is a good day</span>
+        <button onclick="hideGoodDay()">Hide Good Day</button>
+    </bindIf>
+    <bindIf value="!isGoodDayShown">
+        <button onclick="showGoodDay()">Show Good Day</button>
+    </bindIf>
+    <h4>DataBind</h4>
+    <input data-bind="input">
+    <div>
+        <interpolate value="input"></interpolate>
+    </div>
+
+
+</body>
+
+</html>
